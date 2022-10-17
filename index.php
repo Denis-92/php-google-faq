@@ -19,7 +19,7 @@ $menu = [
     [
         "titolo" => "Tecnologie",
         "href" => "#",
-        "active" => true
+        "active" => false
     ],
     [
         "titolo" => "Domande frequenti",
