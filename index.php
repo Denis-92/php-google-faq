@@ -1,5 +1,33 @@
 <?php
 
+$menu = [
+    [
+        "titolo" => "Introduzione",
+        "href" => "#",
+        "active" => false
+    ],
+    [
+        "titolo" => "Norme sulla privacy",
+        "href" => "#",
+        "active" => false
+    ],
+    [
+        "titolo" => "Termini di servizio",
+        "href" => "#",
+        "active" => false
+    ],
+    [
+        "titolo" => "Tecnologie",
+        "href" => "#",
+        "active" => true
+    ],
+    [
+        "titolo" => "Domande frequenti",
+        "href" => "#",
+        "active" => true
+    ]
+];
+
 $domande = [
     [
         "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
@@ -27,10 +55,58 @@ $domande = [
 
 
 
-foreach ( $domande as $domanda ) {
-    echo '<h2>' . $domanda[0] . '</h2>';
-    echo '<p>' . $domanda[1] . '</p>';
-}
+
 
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Google Q&A</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+
+
+    <body>
+
+        <div id="containerMenu">
+        
+            <?php
+                foreach($menu as $link){
+
+                    ?>
+                        <div class = 
+                            " <?= $link[ 'active' ] ? 'active' : '' ?> ">
+
+                            <a href = " <?= $link [ 'href' ] ?> ">
+                                <?= $link [ 'titolo' ] ?>
+                            </a>
+
+                        </div>  
+                    <?php
+
+                }
+            ?>
+
+        </div>
+
+        <div id="containerQA">
+
+            <?php
+                foreach ( $domande as $domanda ) {
+                    echo "<h2>" . $domanda[0] . "</h2>";
+                    echo "<p>" . $domanda[1] . "</p>";
+                }
+            ?>
+
+        </div>
+        
+    </body>
+
+</html>

@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#containerQA {
+    margin: 1rem auto;
+    max-width: 800px;
+    background-color: beige;
+}
+
+#containerMenu {
+    margin: 2rem auto;
+    max-width: 1200px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color: black;
+}
+
+.active {
+    border-bottom: 1rem goldenrod;
+}
+
+#containerMenu>div:hover {
+    background-color: black;
+}
+
+a:hover {
+    color: white;
+}
